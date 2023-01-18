@@ -32,10 +32,11 @@ app.post("/", function (req, res) {
 
     const options = {
         method: "POST",
-        auth: "8489f2eb25aa4b3208f66c4a0b039793-us13"
+        auth: "YOUR MAIL CHIMB API KEY"
     }
 
-    const url = "https://us13.api.mailchimp.com/3.0/lists/afd54ed681";
+    const listId  = "YOUR MAIL CHIMB LIST ID"
+    const url = "https://us13.api.mailchimp.com/3.0/lists/" + listId;
 
     const request = https.request(url, options, function (response) {
         console.log(response.statusCode);
